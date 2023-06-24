@@ -1,12 +1,32 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <title>Laravel-Proj</title>
-        @vite('resources/js/app.js')
-    </head>
-    <body>
-       <h1>Hello Word</h1>
-    </body>
-</html>
+{{--  SE SI USA UN LAYOUT  --
+
+@yield('nome section', 'contents')
+
+-------- OPPURE --------
+
+@yield('nome section')
+
+<CONTENT>
+
+@endsection
+
+--}}
+
+@extends('layouts.base')
+
+{{-- title della pagina --}}
+@section('title', 'DC - Home')
+
+{{-- main --}}
+@section('main')
+
+    {{-- jumbo --}}
+    <div class="jumbo"></div>
+
+    {{-- card comics --}}
+    @include('partials.comics')
+
+    {{-- icons --}}
+    @include('partials.icon')
+
+@endsection

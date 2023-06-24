@@ -1,0 +1,36 @@
+// importo classi comuni
+@use "./variables.scss" as *;
+
+.icons {
+    height: 160px;
+    background-color: #0c7cec;
+    position: relative;
+    z-index: 100;
+
+    .icon-container {
+        @include myContainer;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        .icon-card {
+            display: flex;
+            align-items: center;
+            color: white;
+            padding-inline: 0.5em;
+            cursor: pointer;
+
+            .img_1 {
+                width: 70px;
+            }
+
+            .img_2 {
+                width: 50px;
+            }
+
+            p {
+                margin-left: 0.5em;
+            }
+        }
+    }
+}

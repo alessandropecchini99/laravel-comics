@@ -1,0 +1,81 @@
+// importo classi comuni
+@use "./variables.scss" as *;
+
+// SEZIONE GENERALE
+.comics {
+    height: fit-content;
+    background-color: #1c1c1c;
+    z-index: 100;
+
+    // container
+    .comics-container {
+        @include myContainer;
+        color: white;
+        padding-top: 4em;
+        position: relative;
+
+        // card dei comics
+        .comics-group-cards {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 2em;
+
+            .comic-card {
+                text-align: center;
+                width: calc((100% / 6) - 2em);
+
+                img {
+                    width: 100%;
+                    object-fit: cover;
+                    object-position: top;
+                    aspect-ratio: 1 / 1;
+                    cursor: pointer;
+                }
+
+                h4 {
+                    height: 35px;
+                    margin-top: 10px;
+                    font-size: 1em;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        // button learn more
+        .btn {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding-top: 3em;
+            padding-bottom: 1em;
+
+            button {
+                background-color: #0c7cec;
+                font-weight: 900;
+                color: white;
+                border: 0;
+                padding: 10px 45px;
+                &:hover {
+                    background-color: #0056a7;
+                }
+            }
+        }
+
+        // label current series
+        .label {
+            background-color: #0c7cec;
+            cursor: default;
+            padding: 0.5em 1.5em;
+            position: absolute;
+            top: -2em;
+            left: 0;
+
+            h1 {
+                font-weight: 900;
+            }
+        }
+    }
+}
