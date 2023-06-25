@@ -8,9 +8,7 @@
 
 <CONTENT>
 
-@endsection
-
---}}
+@endsection  --}}
 
 @extends('layouts.base')
 

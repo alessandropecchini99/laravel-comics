@@ -1,5 +1,4 @@
  <div class="comics">
-
     <div class="comics-container">
 
       <div class="comics-group-cards">
@@ -20,5 +19,4 @@
       </div>
 
     </div>
-
   </div>
